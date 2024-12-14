@@ -1,0 +1,85 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Mi Portafolio Web </title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: #3d2304;">
+    
+
+        <header class="header">
+            <div class="banner">
+                <img src="{% static 'media/img/banner.png' %}" alt="Banner" class="banner-img">
+                <div class="overlay">
+                    <div style="display: flex; ">
+                        <div class="profile-pic-container">
+                            <img src="{% static 'media/img/ImagenPrincipal.jpg' %}" alt="Foto de perfil" class="profile-pic" >
+                        </div>
+                        <div style="padding-top: 10%;">
+                            <h1>Daniel Negrette</h1>
+                            <h2>Desarrollador Fullstack / Python Developer</h2>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        
+
+        <nav>
+            <div class="container-buttons">
+                <a href="{% url 'inicio' %}" class="btn">Inicio</a>
+                <a href="{% url 'sobremi' %}" class="btn">Sobre Mi</a>
+                <a href="{% url 'certificados_list' %}" class="btn">Certificados</a>
+                <a href="{% url 'proyectos' %}" class="btn">Proyectos</a>
+                <a href="{% url 'contacto' %}" class="btn">Contacto</a>
+            </div>
+                
+            
+        </nav>
+    </header>
+    <main class="page-content">
+        <div>
+            <video autoplay muted loop id="background-video">
+                <source src="{% static 'media/img/animacion.mp4' %}" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+            <div class="sobre-mi-container">
+                {% block content %}
+                <div >
+                    <img src="{% static 'media/img/fondo.gif' %}" alt="">
+                </div>
+                
+                {% endblock %}
+            </div>
+        </div>
+        
+        
+    </main>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Sígueme</h3>
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/daniel-negrette" target="_blank" >LinkedIn</a>
+
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/danilp12" target="_blank">GitHub</a>
+
+            <i class="fab fa-instagram"></i>
+            <a href="https://instagram.com/danilp12" target="_blank">Instagram</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Daniel Negrette. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>

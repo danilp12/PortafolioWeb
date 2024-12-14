@@ -1,0 +1,26 @@
+<!-- templates/contacto.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="certifi">
+    <h2>Contacto</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group-inline">
+            <div class="form-field">
+                <label for="id_email">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="form-field">
+                <label for="id_asunto">Asunto:</label>
+                {{ form.subject }}
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="id_mensaje">Mensaje:</label>
+            {{ form.message }}
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+{% endblock %}

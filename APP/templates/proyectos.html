@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="repos-container">
+    <h2>Proyectos de GitHub</h2>
+    <div class="repos-grid">
+        {% for repo in repositorios %}
+        <div class="repo-card">
+            <h3>{{ repo.name }}</h3>
+            {% if repo.description %}
+                <p>{{ repo.description }}</p>
+            {% else %}
+                <p class="no-description">Sin descripción disponible</p>
+            {% endif %}
+            <a href="{{ repo.html_url }}" target="_blank" class="repo-link">Ver en GitHub</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

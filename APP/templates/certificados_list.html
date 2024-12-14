@@ -1,0 +1,18 @@
+<!-- templates/certificados_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div  >
+    <h1 style="text-align: center;">Certificaciones</h1>
+    <div class="repo-container">
+        {% for certificado in certificados %}
+            <div class="certifi">
+                <h2>{{ certificado.titulo }}</h2>
+                <img src="{{ certificado.img.url }}" alt="{{ certificado.titulo }}" width="600">
+            </div>
+        {% endfor %}
+        </div>
+</div>
+
+{% endblock %}
