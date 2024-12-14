@@ -8,10 +8,5 @@
         {
             "src": "/(.*)",
             "dest": "Sitio/wsgi.py"
-        },
-        {
-      "src": "/media/(.*)",
-      "dest": "/media/$1"
-    }
-    ]
+        }
 }
