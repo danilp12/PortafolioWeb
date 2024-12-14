@@ -9,4 +9,5 @@
             "src": "/(.*)",
             "dest": "Sitio/wsgi.py"
         }
+    ]
 }
