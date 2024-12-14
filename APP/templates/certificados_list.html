@@ -10,7 +10,7 @@
         {% for certificado in certificados %}
             <div class="certifi">
                 <h2>{{ certificado.titulo }}</h2>
-               <img src="{% static certificado.img.name }}" alt="{{ certificado.titulo }}" width="600">
+              <img src="{% static certificado.img.name %}" alt="{{ certificado.titulo }}" width="600">
             </div>
         {% endfor %}
         </div>
