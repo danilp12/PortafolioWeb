@@ -3,8 +3,16 @@
         "src": "Sitio/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.10" }
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     }],
     "routes": [
+        {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
         {
             "src": "/(.*)",
             "dest": "Sitio/wsgi.py"
